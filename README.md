@@ -1,2 +1,2 @@
-# libnwprm
-network util parameter c library
+# libnwcnf
+network L1-L7 config util c library
