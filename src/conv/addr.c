@@ -17,21 +17,21 @@
 int ncfcnv_str2addrv4 (const char *str, ncf_ipv4_t *addr) {
     
     /* check parameter */
-    TTRCHK_NULLPRM2(str, addr);
-    TTRCHK_STRNLEN(str, NCFCNV_V4IP_STRSIZ);
+    __ttrchk_nullprm2(str, addr);
+    __ttrchk_strnlen(str, NCFCNV_V4IP_STRSIZ);
     
     /* init param */
-    TTRMEM_NINIT(addr, sizeof(ncf_ipv4_t));
+    __ttrmem_ninit(addr, sizeof(ncf_ipv4_t));
     
     char buf[NCFCNV_V4IP_STRSIZ] = {0};
     int  num = 0;
-    TTR_LOOP_i(NCF_IPV4_ELMCNT) {
+    __ttr_loop_i(NCF_IPV4_ELMCNT) {
         
-        TTRMEM_STRINIT(buf);
+        __ttrmem_strinit(buf);
         ttrstr_split(str, '.', i, buf);
         
-        TTRSTR_ATOI(num, buf);
-        TTRCHK_LANGE(num, 0, 255);
+        __ttrstr_atoi(num, buf);
+        __ttrchk_lange(num, 0, 255);
         
         addr->addr[i] = num;
     }
