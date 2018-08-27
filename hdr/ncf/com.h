@@ -3,12 +3,10 @@
  * @brief defined common
  * @author simpart
  */
-#ifndef __COM_H__
-#define __COM_H__
+#ifndef __NCFCOM_H__
+#define __NCFCOM_H__
 
 /*** include ***/
-//#include "protopia.h"
-
 
 /*** define ***/
 /**
